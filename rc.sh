@@ -1,4 +1,4 @@
-export TERM="tmux-256color"
+export TERM="screen-256color"
 export LC_ALL="en_US.UTF-8"
 
 source <(antibody init)
