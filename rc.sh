@@ -1,9 +1,3 @@
-export TERM="screen-256color"
-export LC_ALL="en_US.UTF-8"
-
-source <(antibody init)
-antibody bundle < ~/.config/zsh/zsh_plugins.txt
-
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
 SPACESHIP_CHAR_SYMBOL=" \uf0e7"
 SPACESHIP_CHAR_PREFIX="\uf296"
@@ -35,3 +29,9 @@ alias proxy="export https_proxy=socks5://127.0.0.1:1089;export http_proxy=socks5
 curl -i https://ip.cn"
 alias unproxy="unset http_proxy; unset https_proxy; curl -i https://ip.cn"
 alias detect-ip="curl -i https://ip.cn"
+
+export TERM="screen-256color"
+export LC_ALL="en_US.UTF-8"
+
+source <(antibody init)
+antibody bundle < ~/.config/zsh/zsh_plugins.txt
