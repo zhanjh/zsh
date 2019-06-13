@@ -21,6 +21,8 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_CUSTOM_MEDIUM_FOREGROUND="black"
 #POWERLEVEL9K_CUSTOM_MEDIUM_BACKGROUND="white"
 
+DISABLE_AUTO_TITLE="true"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
 
