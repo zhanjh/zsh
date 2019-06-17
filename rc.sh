@@ -23,17 +23,31 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 DISABLE_AUTO_TITLE="true"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
 
 
-alias proxy="export https_proxy=socks5://127.0.0.1:1089;export http_proxy=socks5://127.0.0.1:1089;
-curl -i https://ip.cn"
-alias unproxy="unset http_proxy; unset https_proxy; curl -i https://ip.cn"
-alias detect-ip="curl -i https://ip.cn"
-
-export TERM="screen-256color"
-export LC_ALL="en_US.UTF-8"
+#alias proxy="export https_proxy=socks5://127.0.0.1:1089;export http_proxy=socks5://127.0.0.1:1089;
+#curl -i https://ip.cn"
+#alias unproxy="unset http_proxy; unset https_proxy; curl -i https://ip.cn"
+#alias detect-ip="curl -i https://ip.cn"
 
 source <(antibody init)
 antibody bundle < ~/.config/zsh/zsh_plugins.txt
+
+
+#From this we can see the order files are read is:
+#
+#/etc/zshenv    # Read for every shell
+#~/.zshenv      # Read for every shell except ones started with -f
+#/etc/zprofile  # Global config for login shells, read before zshrc
+#~/.zprofile    # User config for login shells
+#/etc/zshrc     # Global config for interactive shells
+#~/.zshrc       # User config for interactive shells
+#/etc/zlogin    # Global config for login shells, read after zshrc
+#~/.zlogin      # User config for login shells
+#~/.zlogout     # User config for login shells, read upon logout
+#/etc/zlogout   # Global config for login shells, read after user logout file
+
+# https://www.linuxjournal.com/content/removing-duplicate-path-entries
+export PATH=$(echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}')
