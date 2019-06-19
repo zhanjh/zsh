@@ -10,7 +10,7 @@ SPACESHIP_USER_SHOW="true"
 POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs history)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs history)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
