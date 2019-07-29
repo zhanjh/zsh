@@ -3,3 +3,4 @@ zsh-users/zsh-autosuggestions
 #buonomo/yarn-completion
 denysdovhan/spaceship-prompt
 bhilburn/powerlevel9k
+lukechilds/zsh-nvm
