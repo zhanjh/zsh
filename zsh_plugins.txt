@@ -2,5 +2,6 @@ zdharma/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
 #buonomo/yarn-completion
 denysdovhan/spaceship-prompt
-bhilburn/powerlevel9k
+#bhilburn/powerlevel9k
+romkatv/powerlevel10k
 lukechilds/zsh-nvm
